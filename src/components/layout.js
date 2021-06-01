@@ -1,6 +1,8 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
 import { normalize } from "styled-normalize";
+import Header from "./header";
+import bgImage from "../assets/background-stars.svg";
 
 const GlobalStyle = createGlobalStyle`
   ${normalize};
@@ -57,6 +59,8 @@ const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     font-size: .875rem;
     line-height: 1.78;
+    background: url(${bgImage}) var(--midnight);
+    color: var(--white);
   }
 `;
 
@@ -64,6 +68,7 @@ export default function Layout({ children }) {
   return (
     <>
       <GlobalStyle />
+      <Header />
       {children}
     </>
   );

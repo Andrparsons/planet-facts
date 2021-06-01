@@ -3,8 +3,8 @@ import Layout from "../components/layout";
 
 export default function PlanetTemplate({ pageContext: { planet } }) {
   return (
-    <section>
+    <Layout>
       <p>Page for {planet.name}</p>
-    </section>
+    </Layout>
   );
 }
