@@ -21,6 +21,17 @@ const GlobalStyle = createGlobalStyle`
       --brickOrange: #cd5120;
       --turquiose: #1ec2a4;
       --azul: #2d68f0;
+
+      //planet colours
+
+      --mercury: var(--tealBlue);
+      --venus: var(--lightOrange);
+      --earth: var(--bluishPurple);
+      --mars: var(--paleRed);
+      --jupiter: var(--scarlet);
+      --saturn: var(--brickOrange);
+      --uranus: var(--turquiose);
+      --neptune: var(--azul);
   }
 
   h1 {
