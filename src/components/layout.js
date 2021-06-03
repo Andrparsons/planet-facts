@@ -1,5 +1,5 @@
 import React from "react";
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import { normalize } from "styled-normalize";
 import Header from "./header";
 import bgImage from "../assets/background-stars.svg";
@@ -75,6 +75,11 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+const ButtonGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 export default function Layout({ children }) {
   return (
     <>
@@ -84,3 +89,7 @@ export default function Layout({ children }) {
     </>
   );
 }
+
+Layout.ButtonGroup = function LayoutButtonGroup({ children }) {
+  return <ButtonGroup>{children}</ButtonGroup>;
+};
