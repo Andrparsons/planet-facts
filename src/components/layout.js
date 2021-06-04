@@ -85,6 +85,8 @@ const CardGroup = styled.div`
   flex-direction: row;
 `;
 
+const ContentGroup = styled.div``;
+
 export default function Layout({ children }) {
   return (
     <>
@@ -101,4 +103,8 @@ Layout.ButtonGroup = function LayoutButtonGroup({ children }) {
 
 Layout.CardGroup = function LayoutCardGroup({ children }) {
   return <CardGroup>{children}</CardGroup>;
+};
+
+Layout.ContentGroup = function LayoutContentGroup({ children }) {
+  return <ContentGroup>{children}</ContentGroup>;
 };
