@@ -80,6 +80,11 @@ const ButtonGroup = styled.div`
   flex-direction: column;
 `;
 
+const CardGroup = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
 export default function Layout({ children }) {
   return (
     <>
@@ -92,4 +97,8 @@ export default function Layout({ children }) {
 
 Layout.ButtonGroup = function LayoutButtonGroup({ children }) {
   return <ButtonGroup>{children}</ButtonGroup>;
+};
+
+Layout.CardGroup = function LayoutCardGroup({ children }) {
+  return <CardGroup>{children}</CardGroup>;
 };
