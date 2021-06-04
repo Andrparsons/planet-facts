@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
 import PlanetData from "../data/data.json";
+import menuIcon from "../assets/icon-hamburger.svg";
 
 const HeaderContainer = styled.header`
   border-bottom: 1px solid #ffffff33;
@@ -12,18 +13,54 @@ const HeaderFlex = styled.div`
   align-items: center;
   justify-content: space-between;
   max-width: 1368px;
-  margin: 0 auto;
+  margin: 0 1.5rem;
+
+  @media (min-width: 600px) {
+    flex-direction: column;
+  }
+
+  @media (min-width: 1000px) {
+    flex-direction: row;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 1.75rem;
-  margin: 1.375rem 0;
+  margin: 1rem 0;
   font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -1.05px;
+
+  @media (min-width: 600px) {
+    margin: 2rem 0;
+  }
+
+  @media (min-width: 1000px) {
+    margin: 1.375rem 0;
+  }
 `;
 
 const BigMenu = styled.ul`
-  display: flex;
+  display: none;
   margin: 0;
+  padding: 0;
+
+  @media (min-width: 600px) {
+    display: flex;
+    margin-bottom: 1.75rem;
+  }
+
+  @media (min-width: 1000px) {
+    margin-bottom: 0;
+  }
+`;
+
+const SmallMenu = styled.div`
+  display: flex;
+
+  @media (min-width: 600px) {
+    display: none;
+  }
 `;
 
 const MenuItem = styled.li`
@@ -59,7 +96,7 @@ export default function Header() {
   return (
     <HeaderContainer>
       <HeaderFlex>
-        <Title>THE PLANETS</Title>
+        <Title>the planets</Title>
         <BigMenu>
           {PlanetData.map((planet) => {
             return (
@@ -69,6 +106,9 @@ export default function Header() {
             );
           })}
         </BigMenu>
+        <SmallMenu>
+          <img src={menuIcon} alt="placeholder for menu" />
+        </SmallMenu>
       </HeaderFlex>
     </HeaderContainer>
   );
