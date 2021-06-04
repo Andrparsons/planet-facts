@@ -75,24 +75,55 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+const Container = styled.main`
+  display: grid;
+  grid-template-areas:
+    "buttons"
+    "image"
+    "content"
+    "cards";
+
+  @media (min-width: 600px) {
+    grid-template-areas:
+      "image image"
+      "content buttons"
+      "cards cards";
+  }
+
+  @media (min-width: 1100px) {
+    grid-template-areas:
+      "image content"
+      "image buttons"
+      "cards cards";
+  }
+`;
+
 const ButtonGroup = styled.div`
   display: flex;
   flex-direction: column;
+  grid-area: buttons;
 `;
 
 const CardGroup = styled.div`
   display: flex;
   flex-direction: row;
+  grid-area: cards;
 `;
 
-const ContentGroup = styled.div``;
+const ContentGroup = styled.div`
+  grid-area: content;
+`;
+
+const ImageGroup = styled.div`
+  grid-area: image;
+`;
 
 export default function Layout({ children }) {
   return (
     <>
       <GlobalStyle />
       <Header />
-      {children}
+      <Container>{children}</Container>
     </>
   );
 }
@@ -107,4 +138,8 @@ Layout.CardGroup = function LayoutCardGroup({ children }) {
 
 Layout.ContentGroup = function LayoutContentGroup({ children }) {
   return <ContentGroup>{children}</ContentGroup>;
+};
+
+Layout.ImageGroup = function LayoutImageGroup({ children }) {
+  return <ImageGroup>{children}</ImageGroup>;
 };

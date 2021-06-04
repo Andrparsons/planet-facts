@@ -5,10 +5,18 @@ import Button from "../components/button";
 import Card from "../components/card";
 
 export default function PlanetTemplate({ pageContext: { planet } }) {
-  const imagePath = `.${planet.images.planet}`;
   const [page, setPage] = useState("overview");
-  let content;
 
+  let imagePath;
+  if (page === "overview") {
+    imagePath = `.${planet.images.planet}`;
+  } else if (page === "internal") {
+    imagePath = `.${planet.images.internal}`;
+  } else if (page === "geology") {
+    imagePath = `.${planet.images.internal}`;
+  }
+
+  let content;
   if (page === "overview") {
     content = (
       <Content
@@ -37,7 +45,12 @@ export default function PlanetTemplate({ pageContext: { planet } }) {
 
   return (
     <Layout>
-      <img src={imagePath} alt={`Stylized ${planet.name}`} />
+      <Layout.ImageGroup>
+        <img src={imagePath} alt={`Stylized ${planet.name}`} />
+        {page === "geology" ? (
+          <img src={`.${planet.images.geology}`} alt="" />
+        ) : null}
+      </Layout.ImageGroup>
       <Layout.ContentGroup>{content}</Layout.ContentGroup>
       <Layout.ButtonGroup>
         <Button
