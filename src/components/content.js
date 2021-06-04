@@ -19,7 +19,9 @@ export default function Content({ title, content, link }) {
       <Text>{content}</Text>
       <SourceText>
         Source:
-        <SourceLink href={link}>Wikipedia </SourceLink>
+        <SourceLink href={link}>
+          Wikipedia <img src={iconSource} alt="" />
+        </SourceLink>
       </SourceText>
     </PlanetContent>
   );
