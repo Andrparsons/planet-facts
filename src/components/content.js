@@ -4,7 +4,9 @@ import iconSource from "../assets/icon-source.svg";
 
 const PlanetContent = styled.div``;
 
-const Title = styled.h1``;
+const Title = styled.h1`
+  margin-top: 0;
+`;
 
 const Text = styled.p``;
 

@@ -72,11 +72,13 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.78;
     background: url(${bgImage}) var(--midnight);
     color: var(--white);
+    overflow-x: hidden;
   }
 `;
 
 const Container = styled.main`
   display: grid;
+  grid-template-rows: min-content 300px 1fr min-content;
   grid-template-areas:
     "buttons"
     "image"
@@ -84,6 +86,7 @@ const Container = styled.main`
     "cards";
 
   @media (min-width: 600px) {
+    grid-template-rows: 460px 1fr min-content;
     grid-template-areas:
       "image image"
       "content buttons"
@@ -91,6 +94,8 @@ const Container = styled.main`
   }
 
   @media (min-width: 1100px) {
+    grid-template-rows: 1fr 1fr min-content;
+    grid-template-columns: 1fr 350px;
     grid-template-areas:
       "image content"
       "image buttons"
@@ -111,6 +116,9 @@ const ButtonGroup = styled.div`
     border-bottom: none;
     padding: 0;
   }
+
+  @media (min-width: 1100px) {
+  }
 `;
 
 const CardGroup = styled.div`
@@ -121,11 +129,33 @@ const CardGroup = styled.div`
 
 const ContentGroup = styled.div`
   grid-area: content;
+
+  @media (min-width: 1100px) {
+  }
 `;
 
 const ImageGroup = styled.div`
+  justify-self: center;
+  align-self: center;
   grid-area: image;
+  display: grid;
 `;
+
+const PlanetImage = styled.img`
+  max-width: 38.5%;
+  margin: 0 auto;
+  height: auto;
+
+  @media (min-width: 600px) {
+    max-width: 63.5%;
+  }
+
+  @media (min-width: 1100px) {
+    max-width: 100%;
+  }
+`;
+
+const PlanetOverlay = styled.img``;
 
 export default function Layout({ children }) {
   return (
@@ -151,4 +181,12 @@ Layout.ContentGroup = function LayoutContentGroup({ children }) {
 
 Layout.ImageGroup = function LayoutImageGroup({ children }) {
   return <ImageGroup>{children}</ImageGroup>;
+};
+
+Layout.PlanetImage = function LayoutPlanetImage({ ...restProps }) {
+  return <PlanetImage {...restProps} />;
+};
+
+Layout.PlanetOverlay = function LayoutPlanetOverlay({ ...restProps }) {
+  return <PlanetOverlay {...restProps} />;
 };

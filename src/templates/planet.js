@@ -46,9 +46,9 @@ export default function PlanetTemplate({ pageContext: { planet } }) {
   return (
     <Layout>
       <Layout.ImageGroup>
-        <img src={imagePath} alt={`Stylized ${planet.name}`} />
+        <Layout.PlanetImage src={imagePath} alt={`Stylized ${planet.name}`} />
         {page === "geology" ? (
-          <img src={`.${planet.images.geology}`} alt="" />
+          <Layout.PlanetOverlay src={`.${planet.images.geology}`} alt="" />
         ) : null}
       </Layout.ImageGroup>
       <Layout.ContentGroup>{content}</Layout.ContentGroup>
