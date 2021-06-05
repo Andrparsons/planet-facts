@@ -100,8 +100,17 @@ const Container = styled.main`
 
 const ButtonGroup = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   grid-area: buttons;
+  border-bottom: 1px solid #ffffff33;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+
+  @media (min-width: 600px) {
+    flex-direction: column;
+    border-bottom: none;
+    padding: 0;
+  }
 `;
 
 const CardGroup = styled.div`

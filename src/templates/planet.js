@@ -56,6 +56,7 @@ export default function PlanetTemplate({ pageContext: { planet } }) {
         <Button
           labelNum="01"
           label="overview"
+          labelsmall="overview"
           onClick={() => setPage("overview")}
           colour={planet.name}
           active={page === "overview" ? true : false}
@@ -63,6 +64,7 @@ export default function PlanetTemplate({ pageContext: { planet } }) {
         <Button
           labelNum="02"
           label="internal structure"
+          labelsmall="structure"
           onClick={() => setPage("internal")}
           colour={planet.name}
           active={page === "internal" ? true : false}
@@ -70,6 +72,7 @@ export default function PlanetTemplate({ pageContext: { planet } }) {
         <Button
           labelNum="03"
           label="surface geology"
+          labelsmall="surface"
           onClick={() => setPage("geology")}
           colour={planet.name}
           active={page === "geology" ? true : false}

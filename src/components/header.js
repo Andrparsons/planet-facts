@@ -15,7 +15,7 @@ const HeaderFlex = styled.div`
   max-width: 1368px;
   margin: 0 1.5rem;
 
-  @media (min-width: 600px) {
+  @media (min-width: 700px) {
     flex-direction: column;
   }
 
@@ -31,7 +31,7 @@ const Title = styled.h1`
   text-transform: uppercase;
   letter-spacing: -1.05px;
 
-  @media (min-width: 600px) {
+  @media (min-width: 700px) {
     margin: 2rem 0;
   }
 
@@ -45,7 +45,7 @@ const BigMenu = styled.ul`
   margin: 0;
   padding: 0;
 
-  @media (min-width: 600px) {
+  @media (min-width: 700px) {
     display: flex;
     margin-bottom: 1.75rem;
   }
@@ -58,7 +58,7 @@ const BigMenu = styled.ul`
 const SmallMenu = styled.div`
   display: flex;
 
-  @media (min-width: 600px) {
+  @media (min-width: 700px) {
     display: none;
   }
 `;
