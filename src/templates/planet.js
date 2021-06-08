@@ -13,7 +13,7 @@ export default function PlanetTemplate({ pageContext: { planet } }) {
   } else if (page === "internal") {
     imagePath = `.${planet.images.internal}`;
   } else if (page === "geology") {
-    imagePath = `.${planet.images.internal}`;
+    imagePath = `.${planet.images.planet}`;
   }
 
   let content;
@@ -46,7 +46,9 @@ export default function PlanetTemplate({ pageContext: { planet } }) {
   return (
     <Layout>
       <Layout.ImageGroup>
-        <Layout.PlanetImage src={imagePath} alt={`Stylized ${planet.name}`} />
+        <Layout.ImageContainer>
+          <Layout.PlanetImage src={imagePath} alt={`Stylized ${planet.name}`} />
+        </Layout.ImageContainer>
         {page === "geology" ? (
           <Layout.PlanetOverlay src={`.${planet.images.geology}`} alt="" />
         ) : null}

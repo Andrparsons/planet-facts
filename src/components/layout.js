@@ -135,9 +135,16 @@ const ContentGroup = styled.div`
 `;
 
 const ImageGroup = styled.div`
+  align-content: center;
+  grid-area: image;
+  display: grid;
+  position: relative;
+`;
+
+const ImageContainer = styled.div`
+  position: relative;
   justify-self: center;
   align-self: center;
-  grid-area: image;
   display: grid;
 `;
 
@@ -155,7 +162,24 @@ const PlanetImage = styled.img`
   }
 `;
 
-const PlanetOverlay = styled.img``;
+const PlanetOverlay = styled.img`
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 80px;
+  bottom: 1rem;
+
+  @media (min-width: 600px) {
+    width: 100px;
+    bottom: 3rem;
+  }
+
+  @media (min-width: 1100px) {
+    width: 163px;
+    bottom: 4.75rem;
+  }
+`;
 
 export default function Layout({ children }) {
   return (
@@ -189,4 +213,8 @@ Layout.PlanetImage = function LayoutPlanetImage({ ...restProps }) {
 
 Layout.PlanetOverlay = function LayoutPlanetOverlay({ ...restProps }) {
   return <PlanetOverlay {...restProps} />;
+};
+
+Layout.ImageContainer = function LayoutImageContainer({ children }) {
+  return <ImageContainer>{children}</ImageContainer>;
 };
