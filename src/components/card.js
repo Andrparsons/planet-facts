@@ -4,6 +4,11 @@ import styled from "styled-components";
 const PlanetCard = styled.div`
   border: 1px solid #ffffff33;
   text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding: 0.8rem 1.5rem;
 `;
 
 const Label = styled.h4`

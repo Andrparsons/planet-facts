@@ -37,16 +37,41 @@ const GlobalStyle = createGlobalStyle`
   h1 {
     font-family: 'Antonio', sans-serif;
     font-weight: 500;
-    font-size: 5rem;
+    font-size: 2.5rem;
     line-height: 1.2875;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+
+    @media(min-width: 600px) {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    @media(min-width: 1100px) {
+      font-size: 5rem;
+    }
+
   }
 
   h2 {
     font-family: 'Antonio', sans-serif;
     font-weight: 500;
-    font-size: 2.5rem;
+    font-size: 1.25rem;
     line-height: 1.3;
-    letter-spacing: -1.5px;
+    letter-spacing: -.75px;
+    margin: 0;
+
+
+    @media(min-width: 600px) {
+      font-size: 1.5rem;
+      letter-spacing: -.9px;
+    }
+
+    @media(min-width: 1100px) {
+      font-size: 2.5rem;
+      letter-spacing: -1.5px;
+    }
+
   }
 
   h3 {
@@ -60,19 +85,32 @@ const GlobalStyle = createGlobalStyle`
   h4 {
     font-family: 'Spartan', sans-serif;
     font-weight: 700;
-    font-size: .6875rem;
-    line-height: 2.2;
-    letter-spacing: 1px;
+    font-size: .5rem;
+    line-height: 2;
+    letter-spacing: .73px;
+    margin: 0;
+
+    @media(min-width: 1100px) {
+      font-size: .6875rem;
+      letter-spacing: 1px;
+      line-height: 2.2;
+    }
+
   }
 
   body {
     font-family: 'Spartan', sans-serif;
     font-weight: 400;
-    font-size: .875rem;
-    line-height: 1.78;
+    font-size: .6875rem;
+    line-height: 2;
     background: url(${bgImage}) var(--midnight);
     color: var(--white);
     overflow-x: hidden;
+
+    @media(min-width: 1100px) {
+      font-size: .875rem;
+      line-height: 1.78;    
+    }
   }
 `;
 
@@ -123,8 +161,9 @@ const ButtonGroup = styled.div`
 
 const CardGroup = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   grid-area: cards;
+  margin: 0 1.5rem 3rem 1.5rem;
 `;
 
 const ContentGroup = styled.div`
