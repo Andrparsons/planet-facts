@@ -153,6 +153,8 @@ const ButtonGroup = styled.div`
     flex-direction: column;
     border-bottom: none;
     padding: 0;
+    justify-content: center;
+    margin-right: 2.5rem;
   }
 
   @media (min-width: 1100px) {
@@ -164,6 +166,13 @@ const CardGroup = styled.div`
   flex-direction: column;
   grid-area: cards;
   margin: 0 1.5rem 3rem 1.5rem;
+
+  @media (min-width: 625px) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1.5rem 2.5rem 2.25rem 2.5rem;
+    gap: 0.625rem;
+  }
 `;
 
 const ContentGroup = styled.div`

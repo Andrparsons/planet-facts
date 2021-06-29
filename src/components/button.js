@@ -28,6 +28,7 @@ const PlanetButton = styled.button`
       props.active ? "1px solid transparent" : "1px solid #ffffff33"};
     background-color: ${(props) =>
       props.active ? `var(--${props.colour.toLowerCase()})` : "transparent"};
+    margin-bottom: 1rem;
   }
 `;
 

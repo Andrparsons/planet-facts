@@ -9,6 +9,15 @@ const PlanetCard = styled.div`
   align-items: center;
   margin-bottom: 0.5rem;
   padding: 0.8rem 1.5rem;
+  box-sizing: border-box;
+
+  @media (min-width: 625px) {
+    flex-direction: column;
+    align-items: flex-start;
+    flex-basis: 164px;
+    padding: 1rem;
+    margin-bottom: 0;
+  }
 `;
 
 const Label = styled.h4`

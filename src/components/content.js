@@ -5,6 +5,13 @@ import iconSource from "../assets/icon-source.svg";
 const PlanetContent = styled.div`
   text-align: center;
   margin: 0 1.5rem;
+
+  @media (min-width: 600px) {
+    text-align: left;
+    margin-left: 2.5rem;
+    margin-right: 0;
+    max-width: 340px;
+  }
 `;
 
 const Title = styled.h1`
@@ -18,6 +25,7 @@ const Text = styled.p`
 const SourceText = styled.p`
   font-size: 0.75rem;
   opacity: 0.5;
+  margin: 0;
 `;
 
 const SourceLink = styled.a`
@@ -30,6 +38,10 @@ const SourceContent = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (min-width: 625px) {
+    justify-content: left;
+  }
 `;
 
 export default function Content({ title, content, link }) {
