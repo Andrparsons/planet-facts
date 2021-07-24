@@ -115,6 +115,8 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const Container = styled.main`
+  max-width: 1100px;
+  margin: 0 auto;
   display: grid;
   grid-template-rows: min-content 300px 1fr min-content;
   grid-template-areas:
@@ -132,7 +134,7 @@ const Container = styled.main`
   }
 
   @media (min-width: 1100px) {
-    grid-template-rows: 1fr 1fr min-content;
+    grid-template-rows: 1fr min-content min-content;
     grid-template-columns: 1fr 350px;
     grid-template-areas:
       "image content"
@@ -158,6 +160,7 @@ const ButtonGroup = styled.div`
   }
 
   @media (min-width: 1100px) {
+    margin-right: 0;
   }
 `;
 
@@ -172,6 +175,10 @@ const CardGroup = styled.div`
     justify-content: space-between;
     margin: 1.5rem 2.5rem 2.25rem 2.5rem;
     gap: 0.625rem;
+  }
+
+  @media (min-width: 1100px) {
+    margin: 5.5rem 0 3.5rem 0;
   }
 `;
 

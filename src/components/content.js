@@ -12,6 +12,10 @@ const PlanetContent = styled.div`
     margin-right: 0;
     max-width: 340px;
   }
+
+  @media (min-width: 1100px) {
+    margin-left: 0;
+  }
 `;
 
 const Title = styled.h1`

@@ -22,6 +22,10 @@ const HeaderFlex = styled.div`
   @media (min-width: 1000px) {
     flex-direction: row;
   }
+
+  @media (min-width: 1416px) {
+    margin: 0 auto;
+  }
 `;
 
 const Title = styled.h1`

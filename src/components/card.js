@@ -18,6 +18,10 @@ const PlanetCard = styled.div`
     padding: 1rem;
     margin-bottom: 0;
   }
+
+  @media (min-width: 1100px) {
+    flex-basis: 255px;
+  }
 `;
 
 const Label = styled.h4`
