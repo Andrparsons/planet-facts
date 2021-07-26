@@ -34,6 +34,10 @@ const GlobalStyle = createGlobalStyle`
       --neptune: var(--azul);
   }
 
+  * {
+    box-sizing: border-box;
+  }
+
   h1 {
     font-family: 'Antonio', sans-serif;
     font-weight: 500;
