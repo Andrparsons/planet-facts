@@ -14,7 +14,6 @@ const HeaderFlex = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1368px;
   margin: 0 1.5rem;
 
   @media (min-width: 700px) {
@@ -23,10 +22,6 @@ const HeaderFlex = styled.div`
 
   @media (min-width: 1000px) {
     flex-direction: row;
-  }
-
-  @media (min-width: 1416px) {
-    margin: 0 auto;
   }
 `;
 

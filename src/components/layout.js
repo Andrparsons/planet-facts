@@ -138,7 +138,7 @@ const Container = styled.main`
   }
 
   @media (min-width: 1100px) {
-    grid-template-rows: 1fr min-content min-content;
+    grid-template-rows: 460px repeat(2, 1fr);
     grid-template-columns: 1fr 350px;
     grid-template-areas:
       "image content"
@@ -182,7 +182,8 @@ const CardGroup = styled.div`
   }
 
   @media (min-width: 1100px) {
-    margin: 5.5rem 0 3.5rem 0;
+    margin: 0;
+    align-self: center;
   }
 `;
 
@@ -208,16 +209,23 @@ const ImageContainer = styled.div`
 `;
 
 const PlanetImage = styled.img`
-  max-width: 38.5%;
+  /* max-width: 38.5%; */
+  transform: translate(-50%, -50%) scale(0.385);
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
   margin: 0 auto;
   height: auto;
 
   @media (min-width: 600px) {
-    max-width: 63.5%;
+    transform: translate(-50%, -50%) scale(0.635);
+    /* max-width: 63.5%; */
   }
 
   @media (min-width: 1100px) {
-    max-width: 100%;
+    transform: translate(-50%, -50%) scale(1);
+
+    /* max-width: 100%; */
   }
 `;
 
