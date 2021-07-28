@@ -48,6 +48,8 @@ export default function PlanetTemplate({ pageContext: { planet } }) {
     <Layout>
       <Helmet>
         <title>{planet.name}</title>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Web app to get quick planet facts" />
       </Helmet>
       <Layout.ImageGroup>
         <Layout.ImageContainer>
