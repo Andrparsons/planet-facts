@@ -3,6 +3,7 @@ import Layout from "../components/layout";
 import Content from "../components/content";
 import Button from "../components/button";
 import Card from "../components/card";
+import { Helmet } from "react-helmet";
 
 export default function PlanetTemplate({ pageContext: { planet } }) {
   const [page, setPage] = useState("overview");
@@ -45,6 +46,9 @@ export default function PlanetTemplate({ pageContext: { planet } }) {
 
   return (
     <Layout>
+      <Helmet>
+        <title>{planet.name}</title>
+      </Helmet>
       <Layout.ImageGroup>
         <Layout.ImageContainer>
           <Layout.PlanetImage src={imagePath} alt={`Stylized ${planet.name}`} />

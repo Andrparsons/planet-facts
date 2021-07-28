@@ -191,6 +191,7 @@ const ContentGroup = styled.div`
   grid-area: content;
 
   @media (min-width: 1100px) {
+    align-self: center;
   }
 `;
 
