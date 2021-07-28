@@ -172,7 +172,7 @@ const CardGroup = styled.div`
   display: flex;
   flex-direction: column;
   grid-area: cards;
-  margin: 0 1.5rem 3rem 1.5rem;
+  margin: 1.75rem 1.5rem 3rem 1.5rem;
 
   @media (min-width: 625px) {
     flex-direction: row;
