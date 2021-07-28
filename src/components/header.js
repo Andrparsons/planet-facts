@@ -143,7 +143,7 @@ const PlanetIconContainer = styled.div`
   display: flex;
 `;
 
-const MenuOverlay = styled.div`
+const MenuOverlay = styled.ul`
   display: flex;
   flex-direction: column;
   text-align: left;
